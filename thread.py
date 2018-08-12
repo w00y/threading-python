@@ -71,8 +71,10 @@ def news(url):
 			if 'manage' in resp.text:
 				resultat = bcolors.BOLD +bcolors.OKGREEN+"  Ok"+bcolors.BOLD +bcolors.ENDC+ '\n'
 				save(url)
+		os.system('clear')
 		baner(url,resultat,count)
 	except:
+		os.system('clear')
 		resultat = bcolors.BOLD +bcolors.FAIL+"  OFF"+bcolors.BOLD +bcolors.ENDC+ '\n'
 		baner(url,resultat,count)
 
